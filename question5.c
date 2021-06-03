@@ -74,6 +74,8 @@ void *consommateur(void *arg){
         sem_post(&prod);
         
     }
+    const struct timespec attente = {rand() % 1, rand() % 100};
+    nanosleep(&attente, NULL);
 }
 
 
